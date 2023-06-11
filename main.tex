@@ -1,0 +1,81 @@
+\usepackage{figures/tikzit}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{xparse}
+
+\input{macros/sets}
+\input{macros/category}
+\input{macros/circuits}
+\input{macros/streams}
+
+\graphicspath{{./imgs/}}
+
+\usetheme[
+  background=light,
+  numbering=counter,
+  block=fill,
+  %sectionpage=simple
+]{metropolis}
+
+\input{figures/circuits.tikzstyles}
+\input{figures/circuits.tikzdefs}
+
+% FiraFonts
+\usepackage[sfdefault]{FiraSans}
+\usepackage{FiraMono}
+% Use thinner fonts
+\makeatletter
+\def\bfseries@sf{medium}
+\def\mdseries@sf{l}
+\makeatother
+
+\definecolor{backg}{RGB}{9,72,61}
+\definecolor{accent}{RGB}{0,150,136}
+
+\definecolor{dracback}{RGB}{40, 42, 54}
+\definecolor{dracfore}{RGB}{248, 248, 242}
+\definecolor{dractitle}{RGB}{56, 58, 89}
+\definecolor{dracblock}{RGB}{98, 114, 164}
+\definecolor{draccent}{RGB}{255, 121, 198}
+
+\setbeamercolor{normal text}{bg=dracfore}
+\setbeamercolor{frametitle}{bg=dractitle, fg=dracfore}
+\setbeamercolor{title separator}{fg=draccent}
+\setbeamercolor{progress bar}{fg=draccent, bg=draccent}
+\setbeamercolor{block title}{fg=dracfore, bg=dracblock}
+\setbeamercolor{alerted text}{fg=draccent}
+
+\newtheorem{axiom}{Axiom(s)}
+
+\title{Rewriting modulo traced comonoid structure}
+\author{
+    \texorpdfstring{
+        \large \textbf{George Kaye}
+    }{
+        George Kaye
+    }
+    \and
+    \texorpdfstring{
+        \large Dan Ghica
+    }{
+        Dan Ghica
+    }
+}
+\date{
+    \texorpdfstring{
+        University of Birmingham
+    }{
+        04 July 2023
+    }
+}
+\institute{
+    \texorpdfstring{
+        \normalsize 04 July 2023 -- FSCD 2023, Rome
+    }{
+        University of Birmingham
+    }
+}
+
+\begin{document}
+    \maketitle
+\end{document}
