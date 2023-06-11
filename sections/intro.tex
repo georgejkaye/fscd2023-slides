@@ -1,0 +1,118 @@
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    \centering
+
+    \LARGE
+    We want to model processes \alert{compositionally}.
+
+    \pause
+    \normalsize
+    \vspace{2em}
+
+    \dsptikzfig{strings/category/f}[f][white][m][n]
+    \dsptikzfig{strings/category/f}[g][white][n][p]
+
+    \pause
+    \vspace{2em}
+
+    \dsptikzfig{strings/category/composition}[f][g][white][m][n][p]
+    \dsptikzfig{strings/monoidal/tensor}[f][g][white][m][n][n][p]
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    \centering
+    \LARGE
+    We want to have \alert{feedback}.
+
+    \pause
+    \normalsize
+    \vspace{2em}
+
+    \dsptikzfig{strings/category/f-2-2}[f][white][x][m][x][n]
+    \quad
+    \pause
+    \scalebox{2}{\(\Rightarrow\)}
+    \quad
+    \dsptikzfig{strings/traced/trace-rhs}[f][white][m][n][x]
+
+    \pause
+    \vspace{1em}
+    (traced structure)
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    \centering
+
+    \LARGE
+    We want to \alert{copy} and \alert{discard}.
+
+    \pause
+
+    \normalsize
+    \vspace{2em}
+
+    \dsptikzfig{strings/structure/comonoid/copy}[white]
+    \dsptikzfig{strings/structure/comonoid/discard}[white]
+
+    \pause
+    \vspace{1em}
+    (comonoid structure)
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    \centering
+
+    \LARGE
+    We want to reason \alert{equationally}.
+
+    \normalsize
+
+    \begin{gather*}
+        \pause
+        \dsptikzfig{strings/structure/cartesian/naturality-copy-lhs}[f][white]
+        =
+        \dsptikzfig{strings/structure/cartesian/naturality-copy-rhs}[f][white]
+        \pause
+        \qquad
+        \dsptikzfig{strings/structure/cartesian/naturality-discard-lhs}[f][white]
+        =
+        \dsptikzfig{strings/structure/cartesian/naturality-discard-rhs}
+    \end{gather*}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    Unfolding example step by step
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why are we here?}
+
+    \center
+
+    \LARGE
+    We want to do this reasoning \alert{computationally}.
+
+    \pause
+    \vspace{0.5em}
+
+    This is \alert{hard} for string diagrams.
+
+    \pause
+    \vspace{0.5em}
+    But computers like \alert{graphs}...
+
+\end{frame}
