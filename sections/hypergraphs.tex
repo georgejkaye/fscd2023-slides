@@ -12,6 +12,7 @@
 
     \pause
     \normalsize
+    \vspace{1em}
     Dixon, Kissinger
 
     \includegraphics[width=0.15\textwidth]{dixon}
@@ -33,12 +34,176 @@
 
     \pause
     \normalsize
+    \vspace{1em}
     Bonchi, Gadduchi, Kissinger, Sobocinski, Zanasi
 
-    \includegraphics[width=0.15\textwidth]{bonchi}
-    \includegraphics[width=0.15\textwidth]{gadduchi}
-    \includegraphics[width=0.15\textwidth]{kissinger}
-    \includegraphics[width=0.15\textwidth]{sobocinski}
-    \includegraphics[width=0.15\textwidth]{zanasi}
+    \hypergraphpeople
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{The hyper kind of graph}
+
+    Picture of hypergraph
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{The hyper kind of graph}
+
+    Picture of cospan of hypergraphs
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Terms to graphs}
+
+    \centering
+    \LARGE
+
+    Goal:
+
+    Interpret \alert{string diagrams} as \alert{cospans of hypergraphs}
+
+    \vspace{1em}
+    \pause
+
+    But which hypergraphs?
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Hyp}
+
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Feeling special}
+
+    \centering
+
+    \LARGE
+    Special commutative Frobenius structure
+
+    \pause
+    \normalsize
+    \vspace{1em}
+    \dsptikzfig{strings/structure/monoid/init}[white]
+    \dsptikzfig{strings/structure/comonoid/copy}[white]
+    \dsptikzfig{strings/structure/monoid/merge}[white]
+    \dsptikzfig{strings/structure/comonoid/discard}[white]
+    \pause
+    \vspace{1em}
+
+    Any category with this structure is \alert{self-dual compact closed}
+    \pause
+    \[
+        \dsptikzfig{strings/compact-closed/cup}
+        :=
+        \dsptikzfig{strings/structure/monoid/init}[white]
+        \scalebox{1.5}{\(\seq\)}
+        \dsptikzfig{strings/structure/comonoid/copy}[white]
+        \qquad
+        \dsptikzfig{strings/compact-closed/cap}
+        :=
+        \dsptikzfig{strings/structure/monoid/merge}[white]
+        \scalebox{1.5}{\(\seq\)}
+        \dsptikzfig{strings/structure/comonoid/discard}[white]
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Feeling special graphs}
+
+    \centering
+
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            Frobenius term
+
+            (picture of Frobenius term)
+        \end{center}
+    \end{minipage}
+    \(\leftrightarrow\)
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            isomorphism class of hypergraphs
+
+            (picture of corresponding hypergraph)
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
+
+    \normalsize
+    \scalebox{0.75}{\hypergraphpeople}
+
+    \vspace{1em}
+    \LARGE
+
+    So vanilla hypergraphs are \alert{not restrictive enough}.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{A bit too special}
+
+    \centering
+    \LARGE
+    What hypergraphs correspond to \alert{symmetric monoidal} terms?
+
+    \pause
+    \vspace{1em}
+
+    \normalsize
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            \alert{Monogamous}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            \alert{Acyclic}
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
+
+    \pause
+    \LARGE
+    This is \alert{a bit too restrictive}.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Frobenius to traced comonoid}
+
+    \centering
+    \LARGE
+    Traced comonoid is `almost' Frobenius...
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{<title>}
+
+    Partial left-monogamy
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{<title>}
+
+    Traced comonoid terms
+    \(\leftrightarrow\)
+    Partial left-monogamous hypergraphs
+
+    \includegraphics[width=0.15\textwidth]{ghica}
+    \includegraphics[width=0.15\textwidth]{me}
 
 \end{frame}
