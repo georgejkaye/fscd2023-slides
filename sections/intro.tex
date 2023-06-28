@@ -19,6 +19,11 @@
     \dsptikzfig{strings/category/composition}[f][g][white][m][n][p]
     \dsptikzfig{strings/monoidal/tensor}[f][g][white][m][n][n][p]
 
+    \pause
+
+    \dsptikzfig{strings/category/identity}[white][m]
+    \dsptikzfig{strings/symmetric/symmetry}[white][m][n]
+
     \normalsize
     \vspace{1em}
 
@@ -128,8 +133,9 @@
     \normalsize
 
     \pause
-    \only<2>{\dsptikzfig{strings/dataflow/unfolding-animation/step-0}[F][white]}%
-    \only<3>{\dsptikzfig{strings/dataflow/unfolding-animation/step-1}[F][white]}%
+    \visible<2->{\dsptikzfig{strings/dataflow/unfolding-animation/step-0-nobox}[F][white]}
+    \visible<3->{\(=\)}
+    \visible<3>{\only<1-3>{\dsptikzfig{strings/dataflow/unfolding-animation/step-1}[F][white]}}%
     \only<4>{\dsptikzfig{strings/dataflow/unfolding-animation/step-2}[F][white]}%
     \only<5>{\dsptikzfig{strings/dataflow/unfolding-animation/step-3}[F][white]}%
     \only<6>{\dsptikzfig{strings/dataflow/unfolding-animation/step-4}[F][white]}%

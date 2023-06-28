@@ -44,14 +44,16 @@
 \begin{frame}
     \frametitle{The hyper kind of graph}
 
-    Picture of hypergraph
+    \centering
+    \dsptikzfig{graphs/example}
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{The hyper kind of graph}
+    \frametitle{The hyper kind of (interfaced) graph}
 
-    Picture of cospan of hypergraphs
+    \centering
+    \dsptikzfig{graphs/example-cospan}
 
 \end{frame}
 
@@ -85,6 +87,11 @@
     \centering
 
     \LARGE
+    Which terms correspond to cospans of hypergraphs?
+
+    \pause
+
+    \normalsize
     Special commutative Frobenius structure
 
     \pause
@@ -123,27 +130,34 @@
 
     \begin{minipage}{0.45\textwidth}
         \begin{center}
-            Frobenius term
-
-            (picture of Frobenius term)
-        \end{center}
-    \end{minipage}
-    \(\leftrightarrow\)
-    \begin{minipage}{0.45\textwidth}
-        \begin{center}
             isomorphism class of hypergraphs
 
-            (picture of corresponding hypergraph)
+            \vspace{1em}
+
+            \scalebox{0.625}{\dsptikzfig{graphs/example-frobenius-cospan}}
+        \end{center}
+    \end{minipage}
+    \quad
+    \raisebox{-1em}{\(\leftrightarrow\)}
+    \pause
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            Frobenius term
+
+            \vspace{1em}
+
+            \dsptikzfig{graphs/example-frobenius-term}
         \end{center}
     \end{minipage}
 
     \vspace{1em}
-
+    \pause
     \normalsize
     \scalebox{0.75}{\hypergraphpeople}
 
     \vspace{1em}
-    \LARGE
+    \Large
+    \pause
 
     So vanilla hypergraphs are \alert{not restrictive enough}.
 
@@ -153,29 +167,43 @@
     \frametitle{A bit too special}
 
     \centering
-    \LARGE
+
     What hypergraphs correspond to \alert{symmetric monoidal} terms?
 
-    \pause
     \vspace{1em}
 
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            `monogamous acyclic' hypergraphs
+
+            \vspace{1em}
+
+            \scalebox{0.625}{\dsptikzfig{graphs/example-monogamous-acyclic}}
+        \end{center}
+    \end{minipage}
+    \quad
+    \raisebox{-1em}{\(\leftrightarrow\)}
+    \pause
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            symmetric monoidal term
+
+            \vspace{1em}
+
+            \dsptikzfig{graphs/example-smc-term}
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
+    \pause
     \normalsize
-    \begin{minipage}{0.45\textwidth}
-        \begin{center}
-            \alert{Monogamous}
-        \end{center}
-    \end{minipage}
-    \begin{minipage}{0.45\textwidth}
-        \begin{center}
-            \alert{Acyclic}
-        \end{center}
-    \end{minipage}
+    \scalebox{0.75}{\hypergraphpeople}
 
-    \vspace{1em}
-
+    \vspace{0.5em}
+    \Large
     \pause
-    \LARGE
-    This is \alert{a bit too restrictive}.
+
+    Monogamous acyclic hypergraphs are \alert{too restrictive}.
 
 \end{frame}
 
