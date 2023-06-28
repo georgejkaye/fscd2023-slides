@@ -56,19 +56,39 @@
     \centering
 
     \LARGE
-    We want to \alert{copy} and \alert{discard}.
+    We want to \alert{fork} and \alert{stub}.
 
     \pause
 
     \normalsize
-    \vspace{2em}
+    \vspace{1em}
 
     \dsptikzfig{strings/structure/comonoid/copy}[white]
     \dsptikzfig{strings/structure/comonoid/discard}[white]
 
     \pause
+    \begin{gather*}
+        \dsptikzfig{strings/structure/comonoid/unitality-l-lhs}
+        =
+        \dsptikzfig{strings/structure/comonoid/unitality-l-rhs}
+        \qquad
+        \dsptikzfig{strings/structure/comonoid/unitality-r-lhs}
+        =
+        \dsptikzfig{strings/structure/comonoid/unitality-r-rhs}
+        \qquad
+        \dsptikzfig{strings/structure/comonoid/associativity-lhs}
+        =
+        \dsptikzfig{strings/structure/comonoid/associativity-rhs}
+        \qquad
+        \dsptikzfig{strings/structure/comonoid/commutativity-lhs}
+        =
+        \dsptikzfig{strings/structure/comonoid/commutativity-rhs}
+    \end{gather*}
+
+    \pause
     \vspace{1em}
-    (comonoid structure)
+    (commutative comonoid structure)
+
 
 \end{frame}
 
@@ -78,7 +98,7 @@
     \centering
 
     \LARGE
-    We want to reason \alert{equationally}.
+    We want to \alert{copy} and \alert{discard}.
 
     \normalsize
     \pause
@@ -92,14 +112,31 @@
         \dsptikzfig{strings/structure/cartesian/naturality-discard-rhs}
     \end{gather*}
 
+    \pause
+    \vspace{1em}
+    (Cartesian structure)
+
 \end{frame}
 
 \begin{frame}
     \frametitle{Why are we here?}
 
-    Unfolding example step by step
+    \centering
 
-    (unfolding, fixpoint equation)
+    \LARGE
+    We want to reason \alert{graphically}.
+    \normalsize
+
+    \pause
+    \only<2>{\dsptikzfig{strings/dataflow/unfolding-animation/step-0}[F][white]}%
+    \only<3>{\dsptikzfig{strings/dataflow/unfolding-animation/step-1}[F][white]}%
+    \only<4>{\dsptikzfig{strings/dataflow/unfolding-animation/step-2}[F][white]}%
+    \only<5>{\dsptikzfig{strings/dataflow/unfolding-animation/step-3}[F][white]}%
+    \only<6>{\dsptikzfig{strings/dataflow/unfolding-animation/step-4}[F][white]}%
+    \only<7>{\dsptikzfig{strings/dataflow/unfolding-animation/step-5}[F][white]}%
+    \only<8->{\dsptikzfig{strings/dataflow/unfolding-animation/step-6}[F][white]}%
+
+    \visible<9>{(unfolding, fixpoint equation)}
 
 \end{frame}
 
