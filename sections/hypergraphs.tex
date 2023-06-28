@@ -63,7 +63,7 @@
     \centering
     \LARGE
 
-    Goal:
+    \textbf{Goal}
 
     Interpret \alert{string diagrams} as \alert{cospans of hypergraphs}
 
@@ -75,18 +75,11 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Hyp}
-
-
-
-\end{frame}
-
-\begin{frame}
     \frametitle{Feeling special}
 
     \centering
 
-    \LARGE
+    \Large
     Which terms correspond to cospans of hypergraphs?
 
     \pause
@@ -151,14 +144,11 @@
     \end{minipage}
 
     \vspace{1em}
-    \pause
     \normalsize
     \scalebox{0.75}{\hypergraphpeople}
 
-    \vspace{1em}
     \Large
     \pause
-
     So vanilla hypergraphs are \alert{not restrictive enough}.
 
 \end{frame}
@@ -168,9 +158,9 @@
 
     \centering
 
-    What hypergraphs correspond to \alert{symmetric monoidal} terms?
+    Which hypergraphs correspond to \alert{symmetric monoidal} terms?
 
-    \vspace{1em}
+    \vspace{0.5em}
 
     \begin{minipage}{0.45\textwidth}
         \begin{center}
@@ -195,14 +185,11 @@
     \end{minipage}
 
     \vspace{1em}
-    \pause
     \normalsize
     \scalebox{0.75}{\hypergraphpeople}
 
-    \vspace{0.5em}
     \Large
     \pause
-
     Monogamous acyclic hypergraphs are \alert{too restrictive}.
 
 \end{frame}
@@ -212,24 +199,102 @@
 
     \centering
     \LARGE
-    Traced comonoid is `almost' Frobenius...
+    Traced comonoid is `half' Frobenius...
+
+    \normalsize
+
+    \dsptikzfig{strings/structure/comonoid/copy}[white]
+    \dsptikzfig{strings/structure/comonoid/discard}[white]
 
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{<title>}
+    \frametitle{Monogamous on one side}
 
-    Partial left-monogamy
+    \centering
 
+    \LARGE
+    \alert{Partial left}-monogamy
+
+    \pause
+    \normalsize
+
+    One connection on the \alert{left}, many on the \alert{right}
+
+    \scalebox{0.9}{
+        \dsptikzfig{graphs/fork-cospan}
+        \qquad
+        \dsptikzfig{graphs/stub-cospan}
+    }
+
+    \scalebox{0.9}{
+        \dsptikzfig{graphs/fork-edge-cospan}
+        \qquad
+        \dsptikzfig{graphs/fork-interface-edge-cospan}
+    }
+
+   \end{frame}
+
+\begin{frame}
+    \frametitle{Hold on a moment}
+
+    \centering
+
+    \LARGE
+    Special cases...
+
+    \Large
+    \vspace{1em}
+
+    Trace of the identity
+
+    \vspace{0.5em}
+
+    \scalebox{1}{
+        \dsptikzfig{graphs/trace-identity}
+        \dsptikzfig{graphs/trace-identity-cospan}
+    }
+
+    \vspace{0.5em}
+
+    Trace of the fork
+
+    \vspace{0.5em}
+
+    \scalebox{1}{
+        \dsptikzfig{graphs/trace-fork}
+        \dsptikzfig{graphs/trace-fork-cospan}
+    }
 \end{frame}
 
 \begin{frame}
-    \frametitle{<title>}
+    \frametitle{The correspondence}
 
-    Traced comonoid terms
-    \(\leftrightarrow\)
-    Partial left-monogamous hypergraphs
+    \centering
+
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            partial left-monogamous hypergraphs
+            \vspace{1em}
+
+            \scalebox{0.625}{\dsptikzfig{graphs/example-trace-cospan}}
+        \end{center}
+    \end{minipage}
+    \pause
+    \quad
+    \raisebox{-1em}{\(\leftrightarrow\)}
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            traced comonoid term
+
+            \vspace{1em}
+
+            \dsptikzfig{graphs/example-trace-term}
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
 
     \includegraphics[width=0.15\textwidth]{ghica}
     \includegraphics[width=0.15\textwidth]{me}
