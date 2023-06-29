@@ -2,9 +2,42 @@
     \frametitle{Why are we here?}
 
     \centering
-
     \LARGE
-    We want to model processes \alert{compositionally}.
+
+    We want to reason \alert{equationally} with \alert{processes} with notions of
+    \alert{feedback}, \alert{copying} and \alert{discarding}
+
+    \normalsize
+    (e.g.\ \alert{digital circuits})
+
+    \large
+    \pause
+
+    \vspace{1em}
+
+    What should the \alert{syntax} for these processes be?
+
+    \pause
+
+    How do we \alert{reason} with this syntax?
+
+    \pause
+
+    What is the best way to \alert{rewrite} with this syntax?
+
+    \pause
+
+    Is this syntax suitable for \alert{automating} rewrites?
+
+\end{frame}
+\begin{frame}
+    \frametitle{The building blocks}
+
+    \centering
+
+    \pause
+    \LARGE
+    The graphical syntax of \alert{string diagrams}
 
     \pause
     \normalsize
@@ -18,9 +51,7 @@
 
     \dsptikzfig{strings/category/composition}[f][g][white][m][n][p]
     \dsptikzfig{strings/monoidal/tensor}[f][g][white][m][n][n][p]
-
     \pause
-
     \dsptikzfig{strings/category/identity}[white][m]
     \dsptikzfig{strings/symmetric/symmetry}[white][m][n]
 
@@ -71,7 +102,6 @@
     \dsptikzfig{strings/structure/comonoid/copy}[white]
     \dsptikzfig{strings/structure/comonoid/discard}[white]
 
-    \pause
     \newcommand{\comonscale}{0.75}
     \begin{gather*}
         \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/unitality-l-lhs}}
@@ -94,7 +124,6 @@
     \pause
     \vspace{1em}
     (commutative comonoid structure)
-
 
 \end{frame}
 
@@ -158,10 +187,10 @@
     \pause
     \vspace{0.5em}
 
-    This is \alert{hard} for string diagrams.
+    This is \alert{hard} for terms, even with string diagrams.
 
     \normalsize
-    (and there's still lots of bookkeeping)
+    (lots of shuffling around and bookkeeping required)
     \LARGE
 
     \pause
