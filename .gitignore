@@ -25,6 +25,7 @@
 *.dvi
 *.pdf_tex
 *.vtc
+*.vrb
 */.metals/
 */release/
 *zip

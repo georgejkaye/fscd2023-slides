@@ -86,17 +86,69 @@
 
     \centering
     \LARGE
-    Is the pushout complement necessarily \alert{unique}? \pause \textbf{No.}
+    Which pushout complements are \alert{valid} rewrites?
 
     \pause
     \large
     \alert{Frobenius} setting? \alert{All} pushout complements valid
 
+    \scalebox{0.5}{\hypergraphpeople}
+
     \pause
-    \alert{Symmetric monoidal} setting? \alert{Exactly one} pushout complements valid
+    \alert{Symmetric monoidal} setting? \alert{Exactly one} pushout complement valid
+
+    \scalebox{0.5}{\hypergraphpeople}
 
     \pause
     \alert{Traced comonoid} setting? \alert{Some} pushout complements valid
+
+    \scalebox{0.5}{\meanddan}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{I need some validation}
+
+    \centering
+
+    \newcommand{\dposcale}{0.5}
+    \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/l}[f]}
+        \arrow{d}
+        \&
+        \arrow{l}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/k}[f]}
+        \arrow{d}
+        \arrow{r}
+        \&
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/r}[f]}
+        \arrow{d}
+        \\
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/g}[f]}
+        \&
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/c}}
+        \arrow{l}
+        \arrow{r}
+        \&
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/h}}
+        \\
+        \&
+        \arrow{ul}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/j}}
+        \arrow{u}
+        \arrow{ur}
+    \end{tikzcd}
+
+    \newcommand{\boundaryscale}{0.8}
+    \begin{tikzcd}[column sep = small, ampersand replacement=\&]
+        \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/mplusj}[f]}
+        \&
+        \arrow{l}
+        \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/c}[f]}
+        \arrow{r}
+        \&
+        \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/iplusn}[f]}
+    \end{tikzcd}
 
 \end{frame}
 
@@ -110,12 +162,12 @@
         \(=\)
         \dsptikzfig{graphs/dpo/non-unique/rule-rhs}
 
-        \vspace{2em}
+        \vspace{3em}
 
-        \only<1-3>{\visible<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-1}}}}
-        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-3a}}}
-        \only<5>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-4a}}}
-        \only<6>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-5a}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-1}}}
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-3a}}}
+        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-4a}}}
+        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-5a}}}
     \end{minipage}
     \quad
     \begin{minipage}{0.65\textwidth}
@@ -126,25 +178,25 @@
             \&
             \arrow{l}
             \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/k}}
-            \arrow[visible on=<2->]{d}
+            \arrow{d}
             \arrow{r}
             \&
             \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/r}}
-            \arrow[visible on=<3->]{d}
+            \arrow{d}
             \\
             \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/g}}
             \&
-            |[visible on=<2->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/c-1}}
-            \arrow[visible on=<2->]{l}
-            \arrow[visible on=<3->]{r}
+            \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/c-1}}
+            \arrow{l}
+            \arrow{r}
             \&
-            |[visible on=<3->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/h-1}}
+            \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/h-1}}
             \\
             \&
             \arrow{ul}
             \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique/j-1}}
-            \arrow[visible on=<2->]{u}
-            \arrow[visible on=<3->]{ur}
+            \arrow{u}
+            \arrow{ur}
         \end{tikzcd}
     \end{minipage}
 \end{frame}
@@ -158,7 +210,7 @@
         \(=\)
         \dsptikzfig{graphs/dpo/non-unique/rule-rhs}
 
-        \vspace{2em}
+        \vspace{3em}
 
         \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-1}}}
         \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-3b}}}
@@ -197,7 +249,7 @@
     \end{minipage}
 \end{frame}
 \begin{frame}
-    \frametitle{It's two, actually}
+    \frametitle{It's two, actually (comonoid style)}
 
     \centering
 
@@ -207,11 +259,10 @@
         \(=\)
         \dsptikzfig{graphs/dpo/non-unique-comonoid/rule-rhs}
 
-        \vspace{1em}
+        \vspace{3em}
 
-        \only<1-3>{\visible<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-1}}}}
-        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-2a}}}
-        \only<5>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-3a}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-1}}}
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-2a}}}
     \end{minipage}
     \newcommand{\dposcale}{0.75}
     \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
@@ -220,29 +271,29 @@
         \&
         \arrow{l}
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/k}}
-        \arrow[visible on=<2->]{d}
+        \arrow{d}
         \arrow{r}
         \&
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/r}}
-        \arrow[visible on=<3->]{d}
+        \arrow{d}
         \\
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/g}}
         \&
-        |[visible on=<2-3>]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/c1}}
-        \arrow[visible on=<2->]{l}
-        \arrow[visible on=<3->]{r}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/c1}}
+        \arrow{l}
+        \arrow{r}
         \&
-        |[visible on=<3->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/h1}}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/h1}}
         \\
         \&
         \arrow{ul}
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/j}}
-        \arrow[visible on=<2->]{u}
-        \arrow[visible on=<3->]{ur}
+        \arrow{u}
+        \arrow{ur}
     \end{tikzcd}
 \end{frame}
 \begin{frame}
-    \frametitle{It's two, actually}
+    \frametitle{It's two, actually (comonoid style)}
 
     \centering
 
@@ -252,11 +303,11 @@
         \(=\)
         \dsptikzfig{graphs/dpo/non-unique-comonoid/rule-rhs}
 
-        \vspace{2em}
+        \vspace{3em}
 
-        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-1}}}
-        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-2b}}}
-        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-3b}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-1}}}
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-2b}}}
+        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-3b}}}
     \end{minipage}
     \quad
     \newcommand{\dposcale}{0.75}
@@ -266,7 +317,7 @@
         \&
         \arrow{l}
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/k}}
-        \arrow[visible on=<2->]{d}
+        \arrow{d}
         \arrow{r}
         \&
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/r}}
@@ -275,7 +326,7 @@
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/g}}
         \&
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/c2}}
-        \arrow[visible on=<2->]{l}
+        \arrow{l}
         \arrow{r}
         \&
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/h2}}
