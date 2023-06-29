@@ -115,6 +115,59 @@
 
 \end{frame}
 
+\begin{frame}
+    \frametitle{Feeling special}
+
+    \centering
+
+    Modulo some equations...
+    \newcommand{\frobscale}{0.75}
+    \begin{gather*}
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/unitality-l-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/unitality-l-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/unitality-r-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/unitality-r-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/associativity-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/associativity-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/commutativity-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/commutativity-rhs}}
+        \\[1em]
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/unitality-l-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/unitality-l-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/unitality-r-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/unitality-r-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/associativity-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/associativity-rhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/commutativity-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/comonoid/commutativity-rhs}}
+        \\[1em]
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/frobenius/frobenius-l}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/bialgebra/merge-copy-lhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/frobenius/frobenius-r}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/bialgebra/merge-copy-lhs}}
+        \qquad
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/frobenius/copy-merge-lhs}}
+        =
+        \scalebox{\frobscale}{\dsptikzfig{strings/structure/frobenius/copy-merge-rhs}}
+    \end{gather*}
+\end{frame}
 
 \begin{frame}
     \frametitle{Feeling special graphs}
@@ -135,7 +188,7 @@
     \pause
     \begin{minipage}{0.45\textwidth}
         \begin{center}
-            Frobenius term
+            Frobenius term modulo equations
 
             \vspace{1em}
 
@@ -154,17 +207,39 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Take a step back}
+
+    \pause
+
+    \centering
+    \LARGE
+    \alert{Monogamy}
+
+    \scalebox{0.5}{\hypergraphpeople}
+
+    \pause
+    \normalsize
+
+    One connection on the \alert{left}, one on the \alert{right}
+
+    \pause
+    \vspace{1em}
+
+    \scalebox{0.9}{
+        \dsptikzfig{graphs/identity}
+        \qquad
+        \dsptikzfig{graphs/composition}
+    }
+
+\end{frame}
+\begin{frame}
     \frametitle{A bit too special}
 
     \centering
 
-    Which hypergraphs correspond to \alert{symmetric monoidal} terms?
-
-    \vspace{0.5em}
-
     \begin{minipage}{0.45\textwidth}
         \begin{center}
-            `monogamous acyclic' hypergraphs
+            \alert{monogamous acyclic} hypergraphs
 
             \vspace{1em}
 
@@ -198,7 +273,8 @@
     \frametitle{Frobenius to traced comonoid}
 
     \centering
-    \LARGE
+    \vspace{0.5em}
+    \Large
     Traced comonoid is `half' Frobenius...
 
     \normalsize
@@ -206,7 +282,37 @@
     \dsptikzfig{strings/structure/comonoid/copy}[white]
     \dsptikzfig{strings/structure/comonoid/discard}[white]
 
+    \pause
 
+    \vspace{1em}
+
+    \Large
+    Trace built from compact closed structure...
+    \[
+        \begin{array}{c}
+            \dsptikzfig{strings/compact-closed/cup}[white]
+            \\
+            \tensor
+            \\
+            \dsptikzfig{strings/category/identity}[white]
+        \end{array}
+        \seq
+        \begin{array}{c}
+            \dsptikzfig{strings/category/identity}[white]
+            \\
+            \tensor
+            \\
+            \dsptikzfig{strings/category/f-2-2}[f][white]
+        \end{array}
+        \seq
+        \begin{array}{c}
+            \dsptikzfig{strings/compact-closed/cap}[white]
+            \\
+            \tensor
+            \\
+            \dsptikzfig{strings/category/identity}[white]
+        \end{array}
+    \]
 \end{frame}
 
 \begin{frame}
@@ -217,11 +323,14 @@
     \LARGE
     \alert{Partial left}-monogamy
 
+    \scalebox{0.5}{\meanddan}
+
     \pause
     \normalsize
 
     One connection on the \alert{left}, many on the \alert{right}
 
+    \pause
     \scalebox{0.9}{
         \dsptikzfig{graphs/fork-cospan}
         \qquad
@@ -233,25 +342,25 @@
         \qquad
         \dsptikzfig{graphs/fork-interface-edge-cospan}
     }
-
-   \end{frame}
+\end{frame}
 
 \begin{frame}
     \frametitle{Hold on a moment}
 
     \centering
-
+    \pause
     \LARGE
     Special cases...
 
     \Large
-    \vspace{1em}
+    \pause
+    \vspace{0.5em}
 
     Trace of the identity
 
     \vspace{0.5em}
 
-    \scalebox{1}{
+    \scalebox{0.8}{
         \dsptikzfig{graphs/trace-identity}
         \dsptikzfig{graphs/trace-identity-cospan}
     }
@@ -262,7 +371,7 @@
 
     \vspace{0.5em}
 
-    \scalebox{1}{
+    \scalebox{8}{
         \dsptikzfig{graphs/trace-fork}
         \dsptikzfig{graphs/trace-fork-cospan}
     }
@@ -294,9 +403,9 @@
         \end{center}
     \end{minipage}
 
-    \vspace{1em}
+    \pause
+    \vspace{1.5em}
 
-    \includegraphics[width=0.15\textwidth]{ghica}
-    \includegraphics[width=0.15\textwidth]{me}
+    \meanddan
 
 \end{frame}
