@@ -1,0 +1,127 @@
+\begin{frame}
+    \frametitle{Now what?}
+
+    \centering
+
+    \LARGE
+    We can interpret \alert{terms} as \alert{graphs}
+
+    \pause
+
+    Now to \alert{reason} with them!
+
+    \pause
+
+    Applying equations
+    \pause
+    \(\leftrightarrow\)
+    Graph rewriting
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{One rule for them}
+
+    \centering
+
+    \dsptikzfig{strings/structure/cartesian/naturality-copy-lhs}[f][white][m][n]
+    \(=\)
+    \dsptikzfig{strings/structure/cartesian/naturality-copy-rhs}[f][white][m][n]
+
+    \vspace{1em}
+
+    \pause
+
+    \begin{tikzcd}[column sep = small]
+        \dsptikzfig{graphs/dpo/cartesian/copy/l}[f]
+        &
+        \arrow{l}
+        \dsptikzfig{graphs/dpo/cartesian/copy/k}[f]
+        \arrow{r}
+        &
+        \dsptikzfig{graphs/dpo/cartesian/copy/r}[f]
+    \end{tikzcd}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Do the double pushout}
+
+    \centering
+    \newcommand{\dposcale}{0.6}
+    \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/l}[f]}
+        \arrow{d}
+        \&
+        \arrow{l}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/k}[f]}
+        \arrow[visible on=<2->]{d}
+        \arrow{r}
+        \&
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/r}[f]}
+        \arrow[visible on=<3->]{d}
+        \\
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/g}[f]}
+        \&
+        |[visible on=<2->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/c}}
+        \arrow[visible on=<2->]{l}
+        \arrow[visible on=<3->]{r}
+        \&
+        |[visible on=<3->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/h}}
+        \\
+        \&
+        \arrow{ul}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/example/j}}
+        \arrow[visible on=<2->]{u}
+        \arrow[visible on=<3->]{ur}
+    \end{tikzcd}
+
+    \visible<2>{\alert{Pushout complement}}
+    \qquad\qquad\qquad\qquad
+    \visible<3>{\alert{Pushout!}}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Remember me?}
+
+    \centering
+    \dsptikzfig{strings/traced/trace-rhs}[f][white]
+    \(=\)
+    \dsptikzfig{circuits/examples/reasoning/unfolding/unfolding-3}[f][white]
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unfolding again}
+
+    \centering
+    \newcommand{\dposcale}{0.75}
+    \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/l}}
+        \arrow{d}
+        \&
+        \arrow{l}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/k}}
+        \arrow[visible on=<2->]{d}
+        \arrow{r}
+        \&
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/r}}
+        \arrow[visible on=<3->]{d}
+        \\
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/g}}
+        \&
+        |[visible on=<2->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/c-1}}
+        \arrow[visible on=<2->]{l}
+        \arrow[visible on=<3->]{r}
+        \&
+        |[visible on=<3->]| \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/h-1}}
+        \\
+        \&
+        \arrow{ul}
+        \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/unfolding/j-1}}
+        \arrow[visible on=<2->]{u}
+        \arrow[visible on=<3->]{ur}
+    \end{tikzcd}
+
+\end{frame}
