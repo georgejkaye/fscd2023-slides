@@ -1,6 +1,7 @@
 \begin{frame}
     \frametitle{Why are we here?}
 
+    \pause
     \centering
     \LARGE
 
@@ -31,170 +32,14 @@
 
 \end{frame}
 \begin{frame}
-    \frametitle{The building blocks}
-
-    \centering
-
-    \pause
-    \LARGE
-    The graphical syntax of \alert{string diagrams}
-
-    \pause
-    \normalsize
-    \vspace{2em}
-
-    \dsptikzfig{strings/category/f}[f][white][m][n]
-    \dsptikzfig{strings/category/f}[g][white][n][p]
-
-    \pause
-    \vspace{2em}
-
-    \dsptikzfig{strings/category/composition}[f][g][white][m][n][p]
-    \dsptikzfig{strings/monoidal/tensor}[f][g][white][m][n][n][p]
-    \pause
-    \dsptikzfig{strings/category/identity}[white][m]
-    \dsptikzfig{strings/symmetric/symmetry}[white][m][n]
-
-    \normalsize
-    \vspace{1em}
-
-    (\alert{symmetric monoidal category})
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Why are we here?}
+    \frametitle{The big picture}
 
     \centering
     \LARGE
-    We want to have \alert{feedback}.
 
-    \pause
-    \normalsize
-    \vspace{2em}
-
-    \dsptikzfig{strings/category/f-2-2}[f][white][x][m][x][n]
-    \quad
-    \pause
-    \scalebox{2}{\(\Rightarrow\)}
-    \quad
-    \dsptikzfig{strings/traced/trace-rhs}[f][white][m][n][x]
-
-    \pause
-    \vspace{1em}
-    (traced structure)
+    We have \alert{specialised} previous work on
+    \alert{hypergraph string diagram rewriting} to settings with a
+    \alert{traced comonoid structure}.
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{Why are we here?}
-
-    \centering
-
-    \LARGE
-    We want to \alert{fork} and \alert{stub}.
-
-    \pause
-
-    \normalsize
-    \vspace{1em}
-
-    \dsptikzfig{strings/structure/comonoid/copy}[white]
-    \dsptikzfig{strings/structure/comonoid/discard}[white]
-
-    \newcommand{\comonscale}{0.75}
-    \begin{gather*}
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/unitality-l-lhs}}
-        =
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/unitality-l-rhs}}
-        \qquad
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/unitality-r-lhs}}
-        =
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/unitality-r-rhs}}
-        \qquad
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/associativity-lhs}}
-        =
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/associativity-rhs}}
-        \qquad
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/commutativity-lhs}}
-        =
-        \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/commutativity-rhs}}
-    \end{gather*}
-
-    \pause
-    \vspace{1em}
-    (commutative comonoid structure)
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Why are we here?}
-
-    \centering
-
-    \LARGE
-    We want to \alert{copy} and \alert{discard}.
-
-    \normalsize
-    \pause
-    \begin{gather*}
-        \dsptikzfig{strings/structure/cartesian/naturality-copy-lhs}[f][white]
-        =
-        \dsptikzfig{strings/structure/cartesian/naturality-copy-rhs}[f][white]
-        \qquad
-        \dsptikzfig{strings/structure/cartesian/naturality-discard-lhs}[f][white]
-        =
-        \dsptikzfig{strings/structure/cartesian/naturality-discard-rhs}
-    \end{gather*}
-
-    \pause
-    \vspace{1em}
-    (Cartesian structure)
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Why are we here?}
-
-    \centering
-
-    \LARGE
-    We want to reason \alert{graphically}.
-    \normalsize
-
-    \pause
-    \visible<2->{\dsptikzfig{strings/dataflow/unfolding-animation/step-0-nobox}[F][white]}
-    \visible<3->{\(=\)}
-    \visible<3>{\only<1-3>{\dsptikzfig{strings/dataflow/unfolding-animation/step-1}[F][white]}}%
-    \only<4>{\dsptikzfig{strings/dataflow/unfolding-animation/step-2}[F][white]}%
-    \only<5>{\dsptikzfig{strings/dataflow/unfolding-animation/step-3}[F][white]}%
-    \only<6>{\dsptikzfig{strings/dataflow/unfolding-animation/step-4}[F][white]}%
-    \only<7>{\dsptikzfig{strings/dataflow/unfolding-animation/step-5}[F][white]}%
-    \only<8->{\dsptikzfig{strings/dataflow/unfolding-animation/step-6}[F][white]}%
-
-    \visible<9>{(unfolding, fixpoint equation)}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Why are we here?}
-
-    \center
-
-    \LARGE
-    We want to do this reasoning \alert{computationally}.
-
-    \pause
-    \vspace{0.5em}
-
-    This is \alert{hard} for terms, even with string diagrams.
-
-    \normalsize
-    (lots of shuffling around and bookkeeping required)
-    \LARGE
-
-    \pause
-    \vspace{0.5em}
-    But computers like \alert{graphs}...
-
-\end{frame}

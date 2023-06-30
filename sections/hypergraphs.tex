@@ -18,11 +18,9 @@
     \includegraphics[width=0.15\textwidth]{kissinger}
 
 \end{frame}
-
 \begin{frame}
     \frametitle{What came before}
 
-    \pause
     \centering
     \LARGE
     Hypergraphs
@@ -38,7 +36,6 @@
     \hypergraphpeople
 
 \end{frame}
-
 \begin{frame}
     \frametitle{The hyper kind of graph}
 
@@ -46,7 +43,6 @@
     \dsptikzfig{graphs/example}
 
 \end{frame}
-
 \begin{frame}
     \frametitle{The hyper kind of (interfaced) graph}
 
@@ -54,7 +50,6 @@
     \dsptikzfig{graphs/example-cospan}
 
 \end{frame}
-
 \begin{frame}
     \frametitle{Terms to graphs}
 
@@ -71,19 +66,81 @@
     But which hypergraphs?
 
 \end{frame}
+\begin{frame}
+    \frametitle{Keeping it single}
 
+    \Large
+    Which cospans correspond to \alert{symmetric monoidal} terms?
+
+    \pause
+
+    \centering
+    \LARGE
+    \alert{Monogamous acyclic} hypergraphs
+
+    \scalebox{0.5}{\hypergraphpeople}
+
+    \normalsize
+
+    One connection on the \alert{left}, one on the \alert{right}
+
+    \pause
+    \vspace{1em}
+
+    \scalebox{0.9}{
+        \dsptikzfig{graphs/identity}
+        \qquad
+        \dsptikzfig{graphs/composition}
+    }
+
+\end{frame}
+\begin{frame}
+    \frametitle{Getting the correspondence}
+
+    \centering
+
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            \alert{monogamous acyclic} hypergraphs
+
+            \vspace{1em}
+
+            \scalebox{0.625}{\dsptikzfig{graphs/example-monogamous-acyclic}}
+        \end{center}
+    \end{minipage}
+    \quad
+    \raisebox{-1em}{\(\leftrightarrow\)}
+    \pause
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            symmetric monoidal term
+
+            \vspace{1em}
+
+            \dsptikzfig{graphs/example-smc-term}
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
+    \normalsize
+    \scalebox{0.75}{\hypergraphpeople}
+
+    \Large
+    \pause
+    Monogamous acyclic hypergraphs are \alert{too restrictive}.
+
+\end{frame}
 \begin{frame}
     \frametitle{Feeling special}
 
     \centering
 
     \Large
-    Which terms correspond to cospans of hypergraphs?
+    Which terms correspond to \alert{arbitrary} cospans of hypergraphs?
 
     \pause
 
-    \normalsize
-    Special commutative Frobenius structure
+    Terms with a \alert{special commutative Frobenius structure}
 
     \pause
     \normalsize
@@ -93,33 +150,9 @@
     \dsptikzfig{strings/structure/monoid/merge}[white]
     \dsptikzfig{strings/structure/comonoid/discard}[white]
     \pause
-    \vspace{1em}
+    % \vspace{0.5em}
 
-    Any category with this structure is \alert{self-dual compact closed}
-    \pause
-    \[
-        \dsptikzfig{strings/compact-closed/cup}
-        :=
-        \dsptikzfig{strings/structure/monoid/init}[white]
-        \scalebox{1.5}{\(\seq\)}
-        \dsptikzfig{strings/structure/comonoid/copy}[white]
-        \qquad
-        \dsptikzfig{strings/compact-closed/cap}
-        :=
-        \dsptikzfig{strings/structure/monoid/merge}[white]
-        \scalebox{1.5}{\(\seq\)}
-        \dsptikzfig{strings/structure/comonoid/discard}[white]
-    \]
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Feeling special}
-
-    \centering
-
-    Modulo some equations...
-    \newcommand{\frobscale}{0.75}
+    \newcommand{\frobscale}{0.5}
     \begin{gather*}
         \scalebox{\frobscale}{\dsptikzfig{strings/structure/monoid/unitality-l-lhs}}
         =
@@ -165,10 +198,17 @@
         =
         \scalebox{\frobscale}{\dsptikzfig{strings/structure/frobenius/copy-merge-rhs}}
     \end{gather*}
-\end{frame}
 
+\end{frame}
 \begin{frame}
-    \frametitle{Feeling special graphs}
+    \frametitle{Feeling special}
+
+    \centering
+
+
+\end{frame}
+\begin{frame}
+    \frametitle{Another correspondence}
 
     \centering
 
@@ -200,73 +240,8 @@
 
     \Large
     \pause
-    So vanilla hypergraphs are \alert{not restrictive enough}.
-
+    Arbitrary hypergraphs are \alert{not restrictive enough}.
 \end{frame}
-
-\begin{frame}
-    \frametitle{Take a step back}
-
-    \pause
-
-    \centering
-    \LARGE
-    \alert{Monogamy}
-
-    \scalebox{0.5}{\hypergraphpeople}
-
-    \pause
-    \normalsize
-
-    One connection on the \alert{left}, one on the \alert{right}
-
-    \pause
-    \vspace{1em}
-
-    \scalebox{0.9}{
-        \dsptikzfig{graphs/identity}
-        \qquad
-        \dsptikzfig{graphs/composition}
-    }
-
-\end{frame}
-\begin{frame}
-    \frametitle{A bit too special}
-
-    \centering
-
-    \begin{minipage}{0.45\textwidth}
-        \begin{center}
-            \alert{monogamous acyclic} hypergraphs
-
-            \vspace{1em}
-
-            \scalebox{0.625}{\dsptikzfig{graphs/example-monogamous-acyclic}}
-        \end{center}
-    \end{minipage}
-    \quad
-    \raisebox{-1em}{\(\leftrightarrow\)}
-    \pause
-    \begin{minipage}{0.45\textwidth}
-        \begin{center}
-            symmetric monoidal term
-
-            \vspace{1em}
-
-            \dsptikzfig{graphs/example-smc-term}
-        \end{center}
-    \end{minipage}
-
-    \vspace{1em}
-    \normalsize
-    \scalebox{0.75}{\hypergraphpeople}
-
-    \Large
-    \pause
-    Monogamous acyclic hypergraphs are \alert{too restrictive}.
-
-\end{frame}
-
 \begin{frame}
     \frametitle{Frobenius to traced comonoid}
 
@@ -274,18 +249,34 @@
     \vspace{0.5em}
     \Large
     Traced comonoid is `half' Frobenius...
-
     \normalsize
-
     \dsptikzfig{strings/structure/comonoid/copy}[white]
     \dsptikzfig{strings/structure/comonoid/discard}[white]
 
     \pause
 
-    \vspace{1em}
+    \Large
+    Any category with Frobenius is \alert{self-dual compact closed}...
+    \normalsize
+    \[
+        \dsptikzfig{strings/compact-closed/cup}
+        :=
+        \dsptikzfig{strings/structure/monoid/init}[white]
+        \scalebox{1.5}{\(\seq\)}
+        \dsptikzfig{strings/structure/comonoid/copy}[white]
+        \qquad
+        \dsptikzfig{strings/compact-closed/cap}
+        :=
+        \dsptikzfig{strings/structure/monoid/merge}[white]
+        \scalebox{1.5}{\(\seq\)}
+        \dsptikzfig{strings/structure/comonoid/discard}[white]
+    \]
+
+
+    \vspace{0.5em}
 
     \Large
-    Trace built from compact closed structure...
+    Trace can be built from compact closed structure...
     \[
         \begin{array}{c}
             \dsptikzfig{strings/compact-closed/cup}[white]
@@ -312,14 +303,13 @@
         \end{array}
     \]
 \end{frame}
-
 \begin{frame}
     \frametitle{Monogamous on one side}
 
     \centering
 
     \LARGE
-    \alert{Partial left}-monogamy
+    \alert{Partial left}-monogamous hypergraphs
 
     \scalebox{0.5}{\meanddan}
 
@@ -328,7 +318,6 @@
 
     One connection on the \alert{left}, many on the \alert{right}
 
-    \pause
     \scalebox{0.9}{
         \dsptikzfig{graphs/fork-cospan}
         \qquad
@@ -341,7 +330,6 @@
         \dsptikzfig{graphs/fork-interface-edge-cospan}
     }
 \end{frame}
-
 \begin{frame}
     \frametitle{Hold on a moment}
 
@@ -352,31 +340,34 @@
 
     \Large
     \pause
-    \vspace{0.5em}
+    \vspace{1em}
 
-    Trace of the identity
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        Trace of the identity
 
-    \vspace{0.5em}
+        \vspace{0.5em}
 
-    \scalebox{0.8}{
-        \dsptikzfig{graphs/trace-identity}
-        \dsptikzfig{graphs/trace-identity-cospan}
-    }
+        \scalebox{0.8}{
+            \dsptikzfig{graphs/trace-identity}
+            \dsptikzfig{graphs/trace-identity-cospan}
+        }
+    \end{minipage}
+    \quad
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        Trace of the fork
 
-    \vspace{0.5em}
+        \vspace{0.5em}
 
-    Trace of the fork
-
-    \vspace{0.5em}
-
-    \scalebox{0.8}{
-        \dsptikzfig{graphs/trace-fork}
-        \dsptikzfig{graphs/trace-fork-cospan}
-    }
+        \scalebox{0.8}{
+            \dsptikzfig{graphs/trace-fork}
+            \dsptikzfig{graphs/trace-fork-cospan}
+        }
+    \end{minipage}
 \end{frame}
-
 \begin{frame}
-    \frametitle{The correspondence}
+    \frametitle{One more correspondence}
 
     \centering
 

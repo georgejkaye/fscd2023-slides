@@ -17,8 +17,10 @@
     \(\leftrightarrow\)
     Graph rewriting
 
-\end{frame}
+    \pause
+    \alert{Double pushout (DPO) rewriting}
 
+\end{frame}
 \begin{frame}[fragile]
     \frametitle{One rule for them}
 
@@ -43,7 +45,6 @@
     \end{tikzcd}
 
 \end{frame}
-
 \begin{frame}
     \frametitle{Do the double pushout}
 
@@ -82,7 +83,6 @@
     \qquad\qquad
     \visible<4>{\alert{Pushout!}}
 \end{frame}
-
 \begin{frame}
     \frametitle{Give me complements}
 
@@ -92,28 +92,31 @@
 
     \pause
     \large
-    \alert{Frobenius} setting? \alert{All} pushout complements valid
-
-    \scalebox{0.5}{\hypergraphpeople}
-
-    \pause
     \alert{Symmetric monoidal} setting? \alert{Exactly one} pushout complement valid
 
     \scalebox{0.5}{\hypergraphpeople}
 
-    \pause
-    \alert{Traced comonoid} setting? \alert{Some} pushout complements valid
+    \visible<4->{
+        \alert{Traced comonoid} setting? \alert{Some} pushout complements valid
 
-    \scalebox{0.5}{\meanddan}
+        \scalebox{0.5}{\meanddan}
+    }
+
+    \visible<3->{
+        \alert{Frobenius} setting? \alert{All} pushout complements valid
+
+        \scalebox{0.5}{\hypergraphpeople}
+    }
+
+
 
 \end{frame}
-
 \begin{frame}
     \frametitle{I need some validation}
 
     \centering
 
-    \newcommand{\dposcale}{0.5}
+    \newcommand{\dposcale}{0.45}
     \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/cartesian/copy/l}[f]}
         \arrow{d}
@@ -142,21 +145,23 @@
     \end{tikzcd}
 
     \pause
+    This cospan is \alert{partial left-monogamous}:
 
+    % \hspace{-5em}
     \begin{minipage}{0.2\textwidth}
         \alert{Inputs} of term
 
         \alert{Outputs} of rule
     \end{minipage}
     \begin{minipage}{0.55\textwidth}
-        \newcommand{\boundaryscale}{0.6}
+        \newcommand{\boundaryscale}{0.5}
         \begin{tikzcd}[column sep = small, ampersand replacement=\&]
             \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/mplusj}[f]}
             \arrow{r}
             \&
             \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/c}[f]}
-            \arrow{l}
             \&
+            \arrow{l}
             \scalebox{\boundaryscale}{\dsptikzfig{graphs/dpo/example/iplusn}[f]}
         \end{tikzcd}
     \end{minipage}
@@ -165,9 +170,7 @@
 
         \alert{Outputs} of term
     \end{minipage}
-
 \end{frame}
-
 \begin{frame}
     \frametitle{It's two, actually}
 
@@ -180,10 +183,10 @@
 
         \vspace{3em}
 
-        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-1}}}
-        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-3a}}}
-        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-4a}}}
-        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-5a}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-1}}}%
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-2a}}}%
+        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-3a}}}%
+        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-4a}}}%
     \end{minipage}
     \quad
     \begin{minipage}{0.65\textwidth}
@@ -228,10 +231,10 @@
 
         \vspace{3em}
 
-        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-1}}}
-        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-3b}}}
-        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-4b}}}
-        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-5b}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-1}}}%
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-2b}}}%
+        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-3b}}}%
+        \only<4>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique/derivation-animation/step-4b}}}%
     \end{minipage}
     \quad
     \begin{minipage}{0.65\textwidth}
@@ -277,9 +280,10 @@
 
         \vspace{3em}
 
-        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-1}}}
-        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-2a}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-animation/step-1}}}%
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-animation/step-2a}}}%
     \end{minipage}
+    \quad
     \newcommand{\dposcale}{0.75}
     \begin{tikzcd}[column sep = small, row sep = small, ampersand replacement=\&]
         \scalebox{\dposcale}{\dsptikzfig{graphs/dpo/non-unique-comonoid/l}}
@@ -321,9 +325,9 @@
 
         \vspace{3em}
 
-        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-1}}}
-        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-2b}}}
-        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/rewrite-3b}}}
+        \only<1>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-animation/step-1}}}%
+        \only<2>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-animation/step-2b}}}%
+        \only<3>{\scalebox{0.75}{\dsptikzfig{graphs/dpo/non-unique-comonoid/derivation-animation/step-3b}}}%
     \end{minipage}
     \quad
     \newcommand{\dposcale}{0.75}
@@ -365,7 +369,6 @@
     \dsptikzfig{circuits/examples/reasoning/unfolding/unfolding-3}[f][white]
 
 \end{frame}
-
 \begin{frame}
     \frametitle{Unfolding again}
 
