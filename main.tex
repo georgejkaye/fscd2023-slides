@@ -56,7 +56,8 @@
 \setbeamercolor{block title}{fg=dracfore, bg=dracblock}
 \setbeamercolor{alerted text}{fg=draccent}
 
-\newtheorem{axiom}{Axiom(s)}
+\newcommand{\await}{\iftoggle{static}{}{\pause}}
+
 
 \title{Rewriting modulo traced comonoid structure}
 \author{
@@ -115,7 +116,7 @@
         \LARGE
         Two contributions
 
-        \pause
+        \await
 
         \Large
         Characterised \alert{partial left-monogamous} cospans of hypergraphs as
@@ -123,7 +124,7 @@
 
         \vspace{1em}
 
-        \pause
+        \await
 
         Characterised the correct notion of \alert{pushout complement} for
         traced comonoid terms

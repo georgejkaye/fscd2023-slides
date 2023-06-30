@@ -6,18 +6,18 @@
     \LARGE
     We can interpret \alert{terms} as \alert{graphs}
 
-    \pause
+    \await
 
     Now to \alert{reason} with them!
 
-    \pause
+    \await
 
     Applying equations
-    \pause
+    \await
     \(\leftrightarrow\)
     Graph rewriting
 
-    \pause
+    \await
     \alert{Double pushout (DPO) rewriting}
 
 \end{frame}
@@ -32,7 +32,7 @@
 
     \vspace{1em}
 
-    \pause
+    \await
 
     \begin{tikzcd}[column sep = small]
         \dsptikzfig{graphs/dpo/cartesian/copy/l}[f]
@@ -90,11 +90,13 @@
     \LARGE
     Which pushout complements are \alert{valid} rewrites?
 
-    \pause
+    \await
     \large
-    \alert{Symmetric monoidal} setting? \alert{Exactly one} pushout complement valid
+    \visible<2->{
+        \alert{Symmetric monoidal} setting? \alert{Exactly one} pushout complement valid
 
-    \scalebox{0.5}{\hypergraphpeople}
+        \scalebox{0.5}{\hypergraphpeople}
+    }
 
     \visible<4->{
         \alert{Traced comonoid} setting? \alert{Some} pushout complements valid
@@ -145,6 +147,8 @@
     \end{tikzcd}
 
     \pause
+
+    \await
     This cospan is \alert{partial left-monogamous}:
 
     % \hspace{-5em}

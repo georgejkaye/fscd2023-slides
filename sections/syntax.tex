@@ -3,23 +3,23 @@
 
     \centering
 
-    \pause
+    \await
     \LARGE
     The graphical syntax of \alert{string diagrams}
 
-    \pause
+    \await
     \normalsize
     \vspace{2em}
 
     \dsptikzfig{strings/category/f}[f][white][m][n]
     \dsptikzfig{strings/category/f}[g][white][n][p]
 
-    \pause
+    \await
     \vspace{2em}
 
     \dsptikzfig{strings/category/composition}[f][g][white][m][n][p]
     \dsptikzfig{strings/monoidal/tensor}[f][g][white][m][n][n][p]
-    \pause
+    \await
     \dsptikzfig{strings/category/identity}[white][m]
     \dsptikzfig{strings/symmetric/symmetry}[white][m][n]
 
@@ -36,18 +36,18 @@
     \LARGE
     We want to have \alert{feedback}.
 
-    \pause
+    \await
     \normalsize
     \vspace{2em}
 
     \dsptikzfig{strings/category/f-2-2}[f][white][x][m][x][n]
     \quad
-    \pause
+    \await
     \scalebox{2}{\(\Rightarrow\)}
     \quad
     \dsptikzfig{strings/traced/trace-rhs}[f][white][m][n][x]
 
-    \pause
+    \await
     \vspace{1em}
     (traced structure)
 
@@ -60,7 +60,7 @@
     \LARGE
     We want to \alert{fork} and \alert{stub}.
 
-    \pause
+    \await
 
     \normalsize
     \vspace{1em}
@@ -87,7 +87,7 @@
         \scalebox{\comonscale}{\dsptikzfig{strings/structure/comonoid/commutativity-rhs}}
     \end{gather*}
 
-    \pause
+    \await
     \vspace{1em}
     (commutative comonoid structure)
 
@@ -101,7 +101,7 @@
     We want to \alert{copy} and \alert{discard}.
 
     \normalsize
-    \pause
+    \await
     \begin{gather*}
         \dsptikzfig{strings/structure/cartesian/naturality-copy-lhs}[f][white]
         =
@@ -112,7 +112,7 @@
         \dsptikzfig{strings/structure/cartesian/naturality-discard-rhs}
     \end{gather*}
 
-    \pause
+    \await
     \vspace{1em}
     (Cartesian structure)
 
@@ -126,7 +126,7 @@
     We want to reason \alert{graphically}.
     \normalsize
 
-    \pause
+    \await
     \visible<2->{\dsptikzfig{strings/dataflow/unfolding-animation/step-0-nobox}[F][white]}
     \visible<3->{\(=\)}
     \visible<3>{\only<1-3>{\dsptikzfig{strings/dataflow/unfolding-animation/step-1}[F][white]}}%
@@ -147,7 +147,7 @@
     \LARGE
     We want to do this reasoning \alert{computationally}.
 
-    \pause
+    \await
     \vspace{0.5em}
 
     This is \alert{hard} for terms, even with string diagrams.
@@ -156,7 +156,7 @@
     (lots of shuffling around and bookkeeping required with the comonoid)
     \LARGE
 
-    \pause
+    \await
     \vspace{0.5em}
     But computers like \alert{graphs}...
 
